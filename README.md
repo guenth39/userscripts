@@ -54,6 +54,13 @@ You can keep multiple scripts in this same repository:
 - Always include `@downloadURL` and `@updateURL`.
 - Always bump `@version` on every release.
 
+## Cursor AI Rules
+
+This repository includes project-specific Cursor guidance in `.cursor/`.
+
+- Overview: [`.cursor/README.md`](./.cursor/README.md)
+- Rules: [`.cursor/rules/`](./.cursor/rules/)
+
 ## Troubleshooting
 
 - Script not updating:

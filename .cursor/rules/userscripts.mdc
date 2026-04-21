@@ -1,0 +1,44 @@
+# Userscripts Repository Rules
+
+## Scope
+
+Applies to all `*.user.js` files in this repository.
+
+## Script Header Requirements
+
+Every userscript must include:
+
+- `@name`
+- `@namespace`
+- `@version`
+- `@description`
+- `@match` (prefer explicit URL patterns)
+- `@grant` (use `none` unless API access is required)
+- `@downloadURL`
+- `@updateURL`
+- `@run-at` (default `document-idle`)
+
+## Code Style
+
+- Prefer plain JavaScript without build tooling.
+- Use `const` by default, `let` only when reassignment is needed.
+- Keep script logic in small named functions.
+- Avoid magic numbers: extract thresholds to top-level constants.
+- Add brief comments only for non-obvious behavior.
+
+## DOM Safety
+
+- Query DOM defensively; handle missing elements gracefully.
+- Avoid assumptions about exact GitHub DOM shape when possible.
+- Do not throw on partial page matches.
+
+## Performance
+
+- Avoid tight polling loops.
+- Prefer `MutationObserver` with scheduling/debouncing.
+- Ensure idempotent DOM updates (no repeated duplicate badges/nodes).
+
+## Compatibility
+
+- Keep compatibility with modern Chromium browsers.
+- Avoid experimental APIs unless absolutely needed.

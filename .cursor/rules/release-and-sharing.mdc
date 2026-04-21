@@ -1,0 +1,31 @@
+# Release and Sharing Workflow
+
+## Standard Release Flow
+
+1. Implement and test changes locally in Tampermonkey.
+2. Bump `@version` in the script header.
+3. Update README if install links, behavior, or settings changed.
+4. Commit with a clear message.
+5. Push to `main`.
+
+## Team Rollout
+
+- Share install links from `raw.githubusercontent.com`.
+- Colleagues install once via Tampermonkey.
+- Future updates are delivered through Tampermonkey update checks.
+
+## Breaking Changes
+
+When behavior changes significantly:
+
+- mention it in README under script section
+- include migration note if user settings are affected
+- keep old defaults where possible to avoid surprises
+
+## Pull Request Checklist
+
+- Header fields complete and valid
+- `@version` incremented
+- No unnecessary broad `@match` patterns
+- No unnecessary privileged `@grant` usage
+- No layout breakage on target pages

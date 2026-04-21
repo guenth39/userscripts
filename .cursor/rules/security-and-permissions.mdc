@@ -1,0 +1,28 @@
+# Security and Permissions Rules
+
+## Principle of Least Privilege
+
+- Default to `@grant none`.
+- Add grants only when required by concrete functionality.
+- Document why each non-`none` grant is required.
+
+## URL Matching
+
+- Keep `@match` patterns as narrow as possible.
+- Avoid catch-all domains unless strictly necessary.
+- Prefer explicit path scoping (for example `.../pulls*`).
+
+## Remote Dependencies
+
+- Avoid remote `@require` unless there is a clear maintenance owner.
+- If `@require` is used, pin to a stable and trusted source.
+
+## Data Handling
+
+- Do not collect, persist, or transmit sensitive user data.
+- Do not log tokens, cookies, or private API payloads.
+
+## Safe Failure
+
+- If page structure changes, fail silently and do not block page usage.
+- Never run operations that can trigger destructive user actions automatically.
