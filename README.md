@@ -16,11 +16,17 @@ Highlights old pull requests in `https://github.com/*/*/pulls` using business da
 
 ## Tampermonkey Setup
 
-1. Install the Tampermonkey extension in Chrome.
-2. Open the install link above.
-3. Tampermonkey opens the install page automatically.
-4. Click **Install**.
-5. Reload GitHub PR list pages.
+1. Open the Tampermonkey extension page in the Chrome Web Store:  
+   `https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=de&utm_source=ext_sidebar`
+2. Click **Add to Chrome** and confirm with **Add extension**.
+3. Optional but recommended: click the puzzle icon in Chrome and pin Tampermonkey for quick access.
+4. Open the install link above (`github-pr-age.user.js`).
+5. Tampermonkey opens an install tab automatically.
+6. Click **Install** in Tampermonkey.
+7. Open or reload a GitHub pull request list page (`https://github.com/*/*/pulls`).
+8. Verify the script is active:
+   - Tampermonkey icon shows the script count on GitHub.
+   - Older pull requests are highlighted by age.
 
 ## Development Flow
 
